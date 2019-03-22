@@ -17,8 +17,9 @@ var request_url = "https://api.giphy.com/v1/gifs/search?q=" + searchTerm + "g&ra
         //     // YOUR CODE GOES HERE
         // //console.log(response.data[2].images[2]);
         // var pic = response.data[0].url
-
-         var pic_url = response.data[0].images.original.url;
+         
+     
+         var pic_url = response.data[Math.floor(Math.random() * 10 )].images.original.url;
      $('.gallery').append('<img src="' + pic_url + '" />')
       },
 
